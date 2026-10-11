@@ -66,6 +66,7 @@ p{margin:0 0 14px;max-width:70ch}
 .box li{margin:7px 0}
 .box li::marker{color:var(--faint)}
 .e .sum{margin:0 0 6px;font-size:17.1px;max-width:none}
+.box .sum{margin:0;font-size:15.9px}
 #projects,#experience{counter-reset:ent}
 #projects .e,#experience .e{counter-increment:ent;position:relative;padding-left:44px}
 #projects .e::before,#experience .e::before{content:counter(ent,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:17.1px;color:var(--faint)}
@@ -111,8 +112,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-si
   #projects .e,#experience .e{padding-left:32px}
   #projects .e::before,#experience .e::before{font-size:16.2px}
   .e h3{font-size:18.5px}
-  .e ul,.box ul,.list,.e .sum{font-size:16.2px}
-  .e .org{font-size:16.2px}
+  .e ul,.box ul,.list,.e .sum{font-size:16.2px}  .e .org{font-size:16.2px}
   .box{padding:18px 20px}
   .sk{grid-template-columns:1fr}
   .sk dt{border-bottom:0;padding-bottom:0}
@@ -125,4 +125,58 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-si
   .avatar{width:132px;max-height:170px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{.side{display:none}.layout{display:block}main{padding:0}section{break-inside:avoid;padding-top:28px}.profile{background:#fff}.print-btn{display:none}.links{display:none}}
+@media print{
+  @page{size:A4;margin:16mm 15mm}
+  :root{--ink:#000;--body:#000;--muted:#2a2a2a;--faint:#555;--line:#999;--soft:#fff;--accent:#000}
+  body{font-size:10.2pt;line-height:1.33;letter-spacing:0}
+  .side,.print-btn{display:none}
+  .layout{display:block;max-width:none}
+  main{padding:0;max-width:none}
+  a{color:#000;text-decoration:none}
+
+  /* A4 is ~673px wide, so the <=900px rules also match here and must be undone */
+  .profile{display:flex;flex-direction:row;align-items:flex-start;gap:10mm;padding:0 0 7pt;border-bottom:.5pt solid var(--line);break-inside:avoid}
+  .avatar{width:26mm;max-height:33mm}
+  .profile h1{font-size:19pt;margin:0 0 2pt;letter-spacing:-.02em}
+  .profile .tag{font-size:10.5pt;margin:0 0 4pt}
+  .profile .loc{font-size:9.6pt}
+  .role{font-size:9.4pt}
+  .ct{margin:4pt 0 0;gap:0 12pt;font-size:9.6pt}
+  .links{display:flex;margin:2pt 0 0;gap:0 12pt;font-size:9.6pt}
+  .links a[href="/cv.pdf"]{display:none}
+
+  section{padding-top:11pt;break-inside:auto}
+  h2{font-size:12pt;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:0 0 6pt;padding-bottom:2pt;border-bottom:.5pt solid var(--line);break-after:avoid}
+  p{margin:0 0 5pt;max-width:none}
+
+  .e,.cert,.box{break-inside:avoid}
+  .e{padding-bottom:9pt}
+  .e .head{flex-direction:row;gap:20pt;align-items:baseline}
+  .e h3{font-size:10.8pt}
+  .e .date{font-size:9.6pt}
+  .e .org{font-size:10pt;margin:1pt 0 3pt}
+  .e .sum{font-size:10pt;margin:0 0 3pt}
+  .box .sum{font-size:9.8pt}
+  .e ul,.box ul,.list{font-size:10pt;margin:2pt 0 0;padding-left:13pt}
+  .e li,.box li,.list li{margin:1.5pt 0}
+  .note{margin-top:5pt;padding:0 5pt;font-size:8.8pt;color:#000;background:none;border:.5pt solid var(--line)}
+  #projects .e,#experience .e{padding-left:26pt}
+  #projects .e::before,#experience .e::before{font-size:10pt}
+
+  .box{padding:0;border:0}
+  .box h3{font-size:10.8pt}
+  .box .meta{font-size:9.5pt;margin:0 0 5pt}
+
+  .sk{grid-template-columns:150px 1fr;border-top:.5pt solid var(--line)}
+  .sk dt,.sk dd{padding:3pt 0;font-size:10pt;border-bottom:.5pt solid var(--line)}
+  .sk dt{padding-bottom:3pt}
+  .rows{border-top:.5pt solid var(--line)}
+  .rows li{grid-template-columns:112px 1fr;gap:10pt;padding:3pt 0;font-size:10pt;border-bottom:.5pt solid #ddd}
+  .rows b{font-size:9.6pt}
+
+  .cert{padding-bottom:7pt}
+  .cert h3{font-size:10.5pt}
+  .cert .m,.cert p{font-size:9.6pt}
+
+  footer{margin-top:12pt;padding-top:6pt;font-size:9pt;border-top:.5pt solid var(--line)}
+}
