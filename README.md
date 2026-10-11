@@ -1,6 +1,6 @@
-# Habibullah Nahid — Personal CV Website
+# Habibullah Nahid - Personal CV Website
 
-A single-page personal resume/CV site for Habibullah Nahid — ICT specialist transitioning into biomedical engineering, AI, and data science. Built with plain HTML/CSS/JS and bundled with Vite.
+A single-page personal resume/CV site for Habibullah Nahid, an ICT specialist transitioning into biomedical engineering, AI, and data science. Built with plain HTML/CSS/JS and bundled with Vite.
 
 ## Sections
 
@@ -23,10 +23,10 @@ A single-page personal resume/CV site for Habibullah Nahid — ICT specialist tr
 ## Project structure
 
 ```
-index.html   — page markup
-style.css    — all styling
-main.js      — scroll-spy nav highlighting
-images/      — profile photo assets
+index.html   - page markup
+style.css    - all styling
+main.js      - scroll-spy nav highlighting
+images/      - profile photo assets
 ```
 
 ## Getting started
