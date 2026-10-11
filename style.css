@@ -65,6 +65,10 @@ p{margin:0 0 14px;max-width:70ch}
 .box ul{margin:4px 0 0;padding-left:1.1em;font-size:17.1px}
 .box li{margin:7px 0}
 .box li::marker{color:var(--faint)}
+.e .sum{margin:0 0 6px;font-size:17.1px;max-width:none}
+#projects,#experience{counter-reset:ent}
+#projects .e,#experience .e{counter-increment:ent;position:relative;padding-left:44px}
+#projects .e::before,#experience .e::before{content:counter(ent,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:17.1px;color:var(--faint)}
 .sk{display:grid;grid-template-columns:190px 1fr;margin:0;border-top:1px solid var(--line)}
 .sk dt,.sk dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line);font-size:17.1px}
 .sk dt{font-weight:700;color:var(--ink)}
@@ -104,8 +108,10 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-si
   section{padding-top:40px}
   .e{padding-bottom:24px}
   .e .head{flex-direction:column;gap:0}
+  #projects .e,#experience .e{padding-left:32px}
+  #projects .e::before,#experience .e::before{font-size:16.2px}
   .e h3{font-size:18.5px}
-  .e ul,.box ul,.list{font-size:16.2px}
+  .e ul,.box ul,.list,.e .sum{font-size:16.2px}
   .e .org{font-size:16.2px}
   .box{padding:18px 20px}
   .sk{grid-template-columns:1fr}

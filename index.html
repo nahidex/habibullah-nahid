@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Habibullah Nahid – ICT Specialist, Biomedical Engineering &amp; AI</title>
+<title>Habibullah Nahid – EEE graduate and ICT engineer | Digital health, wearable sensing &amp; biomedical signal processing</title>
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<meta name="description" content="Habibullah Nahid: ICT specialist with 10+ years designing national digital governance systems, moving into biomedical engineering, AI and data science.">
+<meta name="description" content="Habibullah Nahid: EEE graduate and ICT engineer applying signal processing and machine learning to digital health, wearable sensing and biomedical signal processing.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
 <link rel="stylesheet" href="/style.css">
@@ -21,6 +21,7 @@
         <a href="#interests">Research Interests</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#training">Certifications</a>
@@ -101,6 +102,54 @@
           <li>Developed an analytical model of current–voltage characteristics for GaN/InGaN quantum dot solar cells, including series resistance and load voltage.</li>
           <li>Ran MATLAB simulations to study how dot density, bandgap and absorber width affect photovoltaic performance.</li>
           <li>Built a base in computational modelling, semiconductor physics and data-driven system analysis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="e">
+        <div class="head"><h3>Glucose and wearable signal analysis: preprocessing, features and short-term prediction</h3><span class="date">In progress</span></div>
+        <div class="org"><a href="TODO_PROJECT_REPO_URL" target="_blank" rel="noopener">View on GitHub</a> <span>· Python, NumPy, Pandas, scikit-learn, Jupyter</span></div>
+        <p class="sum">A personal research project using a public CGM/wearable dataset from PhysioNet to practise the pipeline I want to use in graduate research: cleaning noisy physiological time series, extracting features, and building short-term glucose prediction models against simple baselines, with participant-wise evaluation. Preliminary work; results will be posted in the repository.</p>
+        <ul>
+          <li><b>Data quality handling.</b> Missing values, sensor dropout, timestamp alignment.</li>
+          <li><b>Signal preprocessing.</b> Artefact removal, resampling, filtering.</li>
+          <li><b>Feature extraction.</b> Glucose variability, time-in-range, activity and heart-rate window features.</li>
+          <li><b>Modelling.</b> Persistence and linear baselines vs. a tree-based model for 30-minute prediction, evaluated with participant-wise splits (RMSE/MAE).</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="head"><h3>ECG signal processing and beat classification on open PhysioNet records</h3><span class="date">Planned</span></div>
+        <div class="org"><a href="TODO_ECG_PROJECT_REPO_URL" target="_blank" rel="noopener">View on GitHub</a> <span>· Python, SciPy, NumPy, scikit-learn, WFDB</span></div>
+        <p class="sum">A study project to build an end-to-end ECG pipeline on publicly available annotated records, from raw waveform to beat-level classification. The aim is to work directly with the filtering, detection and validation steps that underpin clinical signal analysis.</p>
+        <ul>
+          <li>Preprocessing: baseline wander removal, powerline notch filtering, bandpass design.</li>
+          <li>QRS detection and beat segmentation from annotated reference records.</li>
+          <li>Morphological and interval features, including RR-interval series.</li>
+          <li>Baseline classifiers evaluated with record-wise splits to avoid leakage between beats of the same patient.</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="head"><h3>Heart rate variability and sleep/activity patterns from open wearable data</h3><span class="date">Planned</span></div>
+        <div class="org"><a href="TODO_HRV_PROJECT_REPO_URL" target="_blank" rel="noopener">View on GitHub</a> <span>· Python, Pandas, SciPy, Matplotlib, Jupyter</span></div>
+        <p class="sum">A project to extract heart rate variability and daily activity rhythm measures from public wearable datasets, and to examine how preprocessing choices change the resulting features. The focus is on reproducible feature definitions rather than on any single model.</p>
+        <ul>
+          <li>Interbeat interval cleaning, ectopic beat handling and resampling.</li>
+          <li>Time-domain and frequency-domain HRV features over sliding windows.</li>
+          <li>Actigraphy-based rest/activity segmentation and daily rhythm summaries.</li>
+          <li>Sensitivity analysis: how window length and artefact thresholds affect feature stability.</li>
+        </ul>
+      </div>
+      <div class="e">
+        <div class="head"><h3>Reimplementing my undergraduate J–V quantum dot solar cell model in Python</h3><span class="date">Planned</span></div>
+        <div class="org"><a href="TODO_JV_MODEL_REPO_URL" target="_blank" rel="noopener">View on GitHub</a> <span>· Python, NumPy, SciPy, Matplotlib, Jupyter</span></div>
+        <p class="sum">A port of the analytical J–V model from my undergraduate thesis and conference paper from MATLAB to an open Python notebook. The goal is to make the numerical work reproducible and openly inspectable, and to document the model assumptions in one place.</p>
+        <ul>
+          <li>Reimplementation of the analytical current–voltage model, including series resistance and load voltage.</li>
+          <li>Parameter sweeps over dot density, bandgap and absorber width.</li>
+          <li>Numerical validation against the figures published in the original paper.</li>
+          <li>Documented notebook so the derivation and code can be read together.</li>
         </ul>
       </div>
     </section>
